@@ -13,7 +13,7 @@ class ViewController: UIViewController
 {
     
     @IBOutlet var gridV: GridView!
-    @IBAction func runB(sender: runButton)
+    @IBAction func runB(sender: UIButton)
     {
         let myEngine = engine()
         var after:[[CellState]] = myEngine.step(gridV.grid)
