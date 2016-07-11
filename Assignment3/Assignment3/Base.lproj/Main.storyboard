@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2g-GY-4ig" userLabel="runButton" customClass="runButton" customModule="Assignment3" customModuleProvider="target">
+                                <rect key="frame" x="285" y="518" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ybm-hb-MKg"/>
+                                    <constraint firstAttribute="width" constant="30" id="lFu-M1-swf"/>
+                                </constraints>
+                                <state key="normal" title="Run"/>
+                                <connections>
+                                    <action selector="runB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gTX-Lx-Uge"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfI-9w-Wha" customClass="GridView" customModule="Assignment3" customModuleProvider="target">
+                                <rect key="frame" x="90" y="90" width="420" height="420"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="408" id="U6D-Zs-HU4"/>
+                                    <constraint firstAttribute="width" constant="408" id="dUY-wf-Jxt"/>
+                                    <constraint firstAttribute="width" secondItem="vfI-9w-Wha" secondAttribute="height" multiplier="1:1" id="f1d-q5-Q2C"/>
+                                    <constraint firstAttribute="width" secondItem="vfI-9w-Wha" secondAttribute="height" multiplier="1:1" id="hgd-i9-iXg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rows">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cols">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="livingColor">
+                                        <color key="value" red="0.0" green="1" blue="0.052975194320000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bornColor">
+                                        <color key="value" red="0.0" green="1" blue="0.052975194320000002" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="diedColor">
+                                        <color key="value" white="0.33333333329999998" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gridColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="gridWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="U6D-Zs-HU4"/>
+                                        <exclude reference="dUY-wf-Jxt"/>
+                                        <exclude reference="hgd-i9-iXg"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="vfI-9w-Wha" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" priority="750" constant="1" id="4Py-Zx-qiI"/>
+                            <constraint firstItem="vfI-9w-Wha" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7Am-EM-vKv"/>
+                            <constraint firstItem="o2g-GY-4ig" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9pW-Kw-rqB"/>
+                            <constraint firstItem="vfI-9w-Wha" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DfO-l4-qtd"/>
+                            <constraint firstItem="o2g-GY-4ig" firstAttribute="top" secondItem="vfI-9w-Wha" secondAttribute="bottom" constant="8" id="QMi-2C-eio"/>
+                            <constraint firstItem="vfI-9w-Wha" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" priority="750" id="gQU-c7-NXL"/>
+                            <constraint firstItem="vfI-9w-Wha" firstAttribute="width" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="mcs-Un-usx"/>
+                            <constraint firstItem="vfI-9w-Wha" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pDU-bZ-8H9"/>
+                            <constraint firstItem="vfI-9w-Wha" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="phe-PB-6o3"/>
+                            <constraint firstItem="vfI-9w-Wha" firstAttribute="width" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="t00-NN-4Pe"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4Py-Zx-qiI"/>
+                                <exclude reference="mcs-Un-usx"/>
+                                <exclude reference="pDU-bZ-8H9"/>
+                                <exclude reference="phe-PB-6o3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="gridV" destination="vfI-9w-Wha" id="Nn5-9W-6pl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197" y="352"/>
+        </scene>
+    </scenes>
+</document>
